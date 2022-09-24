@@ -15,7 +15,12 @@ public class TicketBookingThread extends Thread{
 	
 	@Override
 	public void run() {
-		ticketCntr.bookTicket(name, noOfTicket);
+		try {
+			ticketCntr.bookTicket(name, noOfTicket);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

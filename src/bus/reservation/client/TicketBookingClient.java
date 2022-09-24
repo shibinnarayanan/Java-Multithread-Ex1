@@ -15,9 +15,13 @@ public class TicketBookingClient {
 		
 		TicketBookingThread t3 = new TicketBookingThread(tc, "Sayu",8);
 		
+		t1.setName("Thread 1");
+		t2.setName("Thread 2");
+		t3.setName("Thread 3");
 		t1.start();
 		t2.start();
 		t3.start();
+		
 		
 	}
 
